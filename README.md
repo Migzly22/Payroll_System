@@ -1,5 +1,3 @@
-# Payroll_System
+# Payroll_System with Attendance Monitoring
 
-->> Lazaro, Gravador 
-  Please Fix the Design of the System
-->> Migriño
+
