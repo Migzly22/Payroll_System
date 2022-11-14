@@ -1,0 +1,26 @@
+:root{
+    --color1: #0d6efd;
+
+    --warningcolor: #dc3545;
+}
+
+
+
+
+
+.form-control:focus{
+  border-color: var(--color1);
+  box-shadow: none;
+}
+.form-control:focus + label{
+  color: var(--color1);
+}
+
+
+.form-control.is-invalid:focus{
+  border-color: var(--warningcolor);
+  box-shadow: none;
+}
+.form-control.is-invalid:focus + label{
+  color: var(--warningcolor);
+}
