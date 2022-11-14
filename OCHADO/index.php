@@ -114,7 +114,7 @@
                                             IF (TIMEDIFF(Time_out, Time_in) >= '11:30:00', 'OT', 'REGULAR')
                                             , 'UNDERTIME') 
                                     END
-                                WHERE Attendance_date = CURRENT_DATE AND Emp_code = 'OCH001';";
+                                WHERE Attendance_date = CURRENT_DATE AND Emp_code = '$empcode';";
                                 mysqli_query($con,$sqlcode);
 
                                 
