@@ -15,6 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./CSS/attendance.css">
+
+    <script src="./JS/attendance.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -23,11 +25,11 @@
                 <h4 class="text-center mb-3">OCHADO Employee Attendance</h4>
 
                 <div class="form-floating mb-3"> <!-- is-invalid-->
-                    <input type="text" class="form-control" id="lname" name="lastname" placeholder="name@example.com" autocomplete="off" pattern="[A-Za-z]+" required>
+                    <input type="text" class="form-control" id="lname" name="lastname" onkeypress="requiredpattern(event)" placeholder="name@example.com" autocomplete="off" required>
                     <label for="lname">Lastname</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="fname" name="firstname" placeholder="name@example.com"  autocomplete="off" pattern="[A-Za-z]+" required>
+                    <input type="text" class="form-control" id="fname" name="firstname" onkeypress="requiredpattern(event)" placeholder="name@example.com"  autocomplete="off" required>
                     <label for="fname">First name</label>
                 </div>
                 <div class="d-flex justify-content-between ms-auto">
@@ -136,7 +138,6 @@
 
         </div>
     </div>
-
 
 </body>
 </html>
