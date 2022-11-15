@@ -58,9 +58,9 @@
 
                     if (mysqli_num_rows($result) == 1){
 
-                        $empcode = mysqli_fetch_assoc($result)['Emp_code'];
+                        $empcode = mysqli_fetch_assoc($result)['Emp_id'];
 
-                        $sqlcode = "SELECT * FROM `ochado_attendance` WHERE Attendance_date = CURRENT_DATE AND Emp_code = '$empcode'";
+                        $sqlcode = "SELECT * FROM `ochado_attendance` WHERE Attendance_date = CURRENT_DATE AND Emp_id = '$empcode'";
                         $result = mysqli_query($con,$sqlcode);
 
                         if (mysqli_num_rows($result) > 0) {
@@ -92,9 +92,9 @@
 
                     if (mysqli_num_rows($result) == 1){
 
-                        $empcode = mysqli_fetch_assoc($result)['Emp_code'];
+                        $empcode = mysqli_fetch_assoc($result)['Emp_id'];
 
-                        $sqlcode = "SELECT * FROM `ochado_attendance` WHERE Attendance_date = CURRENT_DATE AND Emp_code = '$empcode'";
+                        $sqlcode = "SELECT * FROM `ochado_attendance` WHERE Attendance_date = CURRENT_DATE AND Emp_id = '$empcode'";
                         $result = mysqli_query($con,$sqlcode);
 
                         if (mysqli_num_rows($result) <= 0) {
@@ -116,7 +116,7 @@
                                             IF (TIMEDIFF(Time_out, Time_in) >= '11:30:00', 'OT', 'REGULAR')
                                             , 'UNDERTIME') 
                                     END
-                                WHERE Attendance_date = CURRENT_DATE AND Emp_code = '$empcode';";
+                                WHERE Attendance_date = CURRENT_DATE AND Emp_id = '$empcode';";
                                 mysqli_query($con,$sqlcode);
 
                                 
