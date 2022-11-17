@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./CSS/login.css">
+    <title>Document</title> 
+    <link rel="stylesheet" href="./CSS/login1.css">
+    <script src="https://kit.fontawesome.com/7489440202.js" crossorigin="anonymous"></script>
+
+    <script src="./JS/login.js" defer></script>
 </head>
 <body>
-    <form class="box" action="" method="post">
-        <h1>Ochado </h1>
+    <form class="box" action="">
+        <img src="./IMG/logo.png" class="logo">
+        <h1>Login </h1>
         <input type="text" name="" placeholder="Email" autocomplete="off">
-        <input type="password" name="" placeholder="Password" autocomplete="off">
+        <div class="password">
+            <input type="password" name="" placeholder="Password" autocomplete="off" id="passwordid">
+            <a href="#" target="" id="eye"><i class="fa-solid fa-eye"></i></a>
+        </div>
+
         <input type="submit" value="Login">
         <hr>
-        <a href="#" target="_blank">Forgot Password</a>
+        <a href="#" target="_blank">Forgot Password?</a>
     </form>
 </body>
 </html>

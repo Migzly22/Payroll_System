@@ -1,0 +1,22 @@
+{
+    "folders": [
+        {
+            "path": "../../YAMU"
+        },
+        {
+            "path": ".."
+        },
+        {
+            "path": "../../TRACERALLv13"
+        },
+        {
+            "path": "../../../../Users/user/Desktop/Hayag Lab"
+        },
+        {
+            "path": "../../../../Users/user/Desktop/python"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "OCHADO"
+    }
+}
