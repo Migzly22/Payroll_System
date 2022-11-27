@@ -1,0 +1,98 @@
+<?php
+  require($_SERVER['DOCUMENT_ROOT'].'/OCHADO/DATABASE/db.php');
+  date_default_timezone_set('Asia/Hong_Kong');// to change the time to hongkong
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../CSS/form.css" />
+  <title>Log in & Attendance Form</title>
+  <script src="../JS/app.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+
+          <!--Login Admin-->
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Log in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" value="Login" class="btn solid"/>
+            <!--Forgot Password-->
+            <a href="#">Forgot Password?</a>
+            <!--End Forgot Password-->
+            <p class="social-text">A cup of tea is a cup of peace.</p>
+          </form>
+          <!--END Login Admin-->
+
+
+          <!--Attendance-->
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Attendance</h2>
+            
+            <!--Error Notif-->
+            <div class="alert">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+              <strong>Danger!</strong> Error
+            </div>
+            <!--End Error Notif-->
+
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Surname" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Firstname" />
+            </div>
+            <input type="submit" class="btn" value="Time-in" />
+            <input type="submit" class="btn" value="Time-out" />
+            <p class="social-text">Step aside Monday… This is a job for tea.</p>
+          </form>
+          <!--END Attendance-->
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>OCHADO</h3>
+            <p>
+              From the two Japanese words, <span>OCHA</span> and <span>CHADO</span>, which mean <span>“Tea”</span> and <span>“Japanese way”</span>, this tea concept prides itself in brewing the best quality tea with the most natural and freshest ingredients which sets it apart from other bubble tea concepts.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Attendance
+            </button>
+          </div>
+          <img src="img/register.jpg" class="image" alt="" /> <!--Login Ochado Logo-->
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>OCHADO</h3>
+            <p>
+              OCHADO started in <span>Singapore</span> in <span>2010</span> where the<br><span>“Japanese way”</span> of brewing tea has been popular<br>and loved by many tea-lovers.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Login 
+            </button>
+          </div>
+          <img src="img/register.jpg" class="image" alt="" /> <!--Attendance Ochado Logo-->
+        </div>
+      </div>
+    </div>
+</body>
+</html>
