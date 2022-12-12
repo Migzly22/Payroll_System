@@ -1,4 +1,18 @@
-
+<?php
+    ob_start();
+    session_start();
+    if (isset($_SESSION["Login_Credits"])) {
+        if ($_SESSION["Login_Credits"] != "Admin") {
+            header("Location:../Form2/index.php");
+            ob_end_flush();
+            exit;
+        }
+    }else{
+        header("Location:../Form2/index.php");
+        ob_end_flush();
+        exit;
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +26,10 @@
     <script src="https://kit.fontawesome.com/7489440202.js" crossorigin="anonymous"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../Admin/css/styles.css">
-    <link rel="stylesheet" href="./css/admin1.css">
+    <link rel="stylesheet" href="./css/admin2.css">
 
 
     
@@ -52,13 +67,14 @@
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
+                                <nav class="sb-sidenav-menu-nested ">
                                     <a class="nav-link" href="./Admin.php?refc=Empinfo.php">Employee Information</a>
                                     <a class="nav-link" href="./Admin.php?refc=Empsalary.php">Employee Salary</a>
                                     <a class="nav-link" href="./Admin.php?refc=Empattendance.php">Employee Attendance</a>
+                                    <a class="nav-link" href="./Admin.php?refc=Empsched.php">Employee Schedule</a>
                                 </nav>
                             </div>
-
+                        
                             <!--Leave Report-->
                             <a class="nav-link collapsed" href="./Admin.php?refc=Leaverep.php" >
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-file"></i></div>
@@ -74,7 +90,7 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-gear"></i></div>
                                 User Setting
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="./Admin.php?refc=logout.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
                                 Logout
                             </a>
@@ -114,7 +130,6 @@
             el.classList.toggle("toggled");
         };
     </script>
-
 
 </body>
 

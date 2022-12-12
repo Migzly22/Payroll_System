@@ -1,4 +1,23 @@
+<?php
+    require($_SERVER['DOCUMENT_ROOT'].'/OCHADO/DATABASE/db.php');
+    date_default_timezone_set('Asia/Hong_Kong');// to change the time to hongkong
+
+    $sqlcode = "SELECT * FROM `ochado_admin`;";
+    $result  = mysqli_query($con, $sqlcode);
+
+    $row = mysqli_fetch_assoc($result);
+
+    
+    if(isset($_GET["alert"])){
+        $msg = $_GET["alert"];
+        echo "<script>alert('$msg')</script>";
+    }
+
+?>
+
 <link rel="stylesheet" href="./css/accset.css">
+<script src="./js/useracc.js" defer></script>
+
 <nav class="navbar navbar-expand-lg  py-4 px-4" style="background-color: #000">
                 <div class="d-flex align-items-center">
                     <i class="fas fa-align-left text-white fs-4 me-3" id="menu-toggle"></i>
@@ -13,14 +32,14 @@
             </nav>
 
             <section class="container px-4 sect active d-flex justify-content-between accset" id="s1">
-                <form class="leftside col-md-5 col-sm-12 px-3 py-3">
+                <form action="./PHPS/accsetting.php" class="leftside col-md-5 col-sm-12 px-3 py-3" method="POST">
                     <h5 class="mb-3">User Information</h5>
                     <div class="d-flex align-items-center mb-2">
                         <div class="col-sm-5">
                             First name
                         </div>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" disabled id="fname" aria-describedby="emailHelp">
+                            <input type="text" name="fname"  value="<?php echo  $row["Admin_fname"]; ?>" class="form-control" disabled id="fname" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-2">
@@ -28,7 +47,7 @@
                             Surname
                         </div>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" disabled id="lname" aria-describedby="emailHelp">
+                            <input type="text" name="lname"  value="<?php echo  $row["Admin_lname"]; ?>" class="form-control" disabled id="lname" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-2">
@@ -36,23 +55,23 @@
                             Middle name
                         </div>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" disabled id="mname" aria-describedby="emailHelp">
+                            <input type="text" name="mname"  value="<?php echo  $row["Admin_mname"]; ?>" class="form-control" disabled id="mname" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                        <button type="button" class="btn btn-primary">Update</button>
-                        <button type="button" class="btn btn-success disabled">Success</button>
-                        <button type="button" class="btn btn-danger disabled">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="updateuser">Change</button>
+                        <input type="submit" class="btn btn-success" id="successbtn" disabled name="updatinguser" value="Update">
+                        <button type="button" class="btn btn-danger" id="cancelbtn" disabled>Cancel</button>
                     </div>
                 </form>
-                <form class="rightside col-md-6 col-sm-12 px-3 py-3">
+                <form action="./PHPS/accsetting.php"  class="rightside col-md-6 col-sm-12 px-3 py-3" method="POST">
                     <h5 class="mb-3">Change Email</h5>
                     <div class="d-flex align-items-center mb-2">
                         <div class="col-sm-5">
                             Current Email
                         </div>
                         <div class="col-sm-7">
-                            <input type="email" class="form-control" disabled id="email" aria-describedby="emailHelp">
+                            <input type="email" class="form-control"  id="email" name="email" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-2">
@@ -60,13 +79,12 @@
                             New Email
                         </div>
                         <div class="col-sm-7">
-                            <input type="email" class="form-control" disabled id="nemail" aria-describedby="emailHelp">
+                            <input type="email" class="form-control"  id="nemail" name="nemail" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                        <button type="button" class="btn btn-primary">Update</button>
-                        <button type="button" class="btn btn-success disabled">Success</button>
-                        <button type="button" class="btn btn-danger disabled">Cancel</button>
+                        <input type="submit" class="btn btn-success" name="UpdateEmail" value="Update Email">
+                        <button type="button" class="btn btn-danger" id="cancelemail">Cancel</button>
                     </div>
 
                     <hr>
@@ -76,7 +94,7 @@
                             Current Password
                         </div>
                         <div class="col-sm-7">
-                            <input type="password" class="form-control" disabled id="password" aria-describedby="emailHelp">
+                            <input type="password" class="form-control" id="password" name="password" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-2">
@@ -84,13 +102,12 @@
                             New Password
                         </div>
                         <div class="col-sm-7">
-                            <input type="password" class="form-control" disabled id="npassword" aria-describedby="emailHelp">
+                            <input type="password" class="form-control"  id="npassword"  name="npassword" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                        <button type="button" class="btn btn-primary">Update</button>
-                        <button type="button" class="btn btn-success disabled">Success</button>
-                        <button type="button" class="btn btn-danger disabled">Cancel</button>
+                        <input type="submit" class="btn btn-success" name="UpdatePassword" value="Update Password">
+                        <button type="button" class="btn btn-danger" id="cancelpass">Cancel</button>
                     </div>
                     
                 </form>

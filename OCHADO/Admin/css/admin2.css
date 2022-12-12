@@ -118,11 +118,22 @@
   #page-content-wrapper::-webkit-scrollbar-thumb {
     background-color: grey;
   }
-body::-webkit-scrollbar {
-  width: 1em;
+
+.nav{
+  margin-top: 20px ;
+  max-height: 75vh;
+  overflow: auto;
 }
-body::-webkit-scrollbar-thumb {
+.nav::-webkit-scrollbar {
+  width: .5em;
+}
+.nav::-webkit-scrollbar-thumb {
   background-color: grey;
 }
 
-
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+  padding: 1rem 1rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
