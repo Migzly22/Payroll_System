@@ -33,6 +33,10 @@
 
         if (mysqli_num_rows($result) == 1){
             $Amessage = "Correct";
+
+            $_SESSION["Login_Credits"] = "Admin";
+            header("Location:../Admin/Admin.php");
+
           
         }else{
             $Amessage = "Incorrect information";
@@ -70,7 +74,7 @@
             </div>
             <input type="submit" value="Login" class="btn solid" name="adminlogin"/>
             <!--Forgot Password-->
-            <a href="../Message/Send.php">Forgot Password?</a>
+            <a href="./reset.php">Forgot Password?</a>
             <!--End Forgot Password-->
             <p class="social-text">A cup of tea is a cup of peace.</p>
           </form>
