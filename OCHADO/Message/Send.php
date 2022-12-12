@@ -1,4 +1,7 @@
 <?php
+ob_start();
+session_start();
+
 require("../DATABASE/db.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -6,6 +9,15 @@ require 'PHPMailer/PHPMailerAutoload.php';
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
+
+$random = rand(10000,99999);
+$email = $_SESSION['email'];
+
+// updating ADMINS UTP
+$sqlcode = "UPDATE ochado_admin SET UTP = '$random' WHERE Admin_email = '$email';";
+mysqli_query($con,$sqlcode);
+
+
 
 
 
@@ -281,7 +293,7 @@ supported-color-schemes: light dark;
                 <h1>Hello,</h1>
                 <p >You recently <span>requested to reset your password</span> for your <span>Ochado Attendance</span> account. This password reset is only valid for the next <span>24 hours.</span></p>
                 <!--Code-->
-                <div class='shadow-none p-3 mb-5 bg-light rounded' style='background-color: black; color: white; text-align: center;'>Authentication Code : 0000</div>
+                <div class='shadow-none p-3 mb-5 bg-light rounded' style='background-color: black; color: white; text-align: center;'>Authentication Code : ".$random."</div>
                 <!--End Code-->
            
                 <p>For security, If you did not request a password reset, please ignore this email</p>
@@ -323,5 +335,7 @@ supported-color-schemes: light dark;
   
 
   $mail ->send();
-  echo "send successgully";
+  $url = '../Form2/reset2.php';
+  header('Location: '.$url);
+  ob_flush();
 ?>
