@@ -1,0 +1,161 @@
+@import url(root.css);
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #1B2631;
+    /*background-image: url(background.jpg);)*/
+  }
+  
+  .box{
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #191919;
+    text-align: center;
+    border-radius: 20px 20px;
+
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  .box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    background: var(--grad1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  .box .textanimation,.box input[type = "password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    border: 2px solid #D4AC0D;
+
+
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.5s;
+  }
+  .box .textanimation:focus,.box input[type = "password"]:focus{
+    border-color: var(--c5);
+    width: 250px;
+  }
+  .box .textanimation:hover,.box input[type = "password"]:hover{
+    border-color: var(--c5);
+  }
+  .box input[type = "submit"]{
+    border:0;
+    background: none;
+    border-radius: 24px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    /*border: 2px solid #D4AC0D;*//*D4AC0D*/
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 24px;
+    border-image: var(--grad2) 1;
+    transition: 0.5s;
+
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .box input[type = "submit"]:focus{
+    border-image: none ;
+    border-color: var(--c5);
+  }
+  .box input[type = "submit"]:hover{
+    transition: 0.5s;
+    border-image: none ;
+    background: var(--c5);
+    border-color: var(--c5);
+    border-radius: 24px;
+  }
+  
+  a {
+    font-family: "Dank Mono", ui-monospace, monospace;
+    background: var(--grad2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+
+  hr{
+    opacity: 1;
+    border: 0;
+    height: 2px;
+    background-color: #D4AC0D;
+
+  }
+  
+  .logo{
+    width: 40%;
+    border-radius: 50%;
+    border: 10px solid #191919;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  h1{
+    margin-top: 3.5rem;
+  }
+
+
+  .password {
+    display: flex;
+    align-items: center;
+  }
+  .password a{
+    position: absolute;
+    left: 73%;/*82*/
+    transform: translate(0%, 0%);
+    transition: 0.5s;
+  }
+  .password a:hover{
+    background: var(--c5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  .box input[type = "password"]:focus ~ a {
+    left: 80%;/*82*/
+    transition: 0.5s;
+  }
+  .box #passwordid:focus ~ a {
+    left: 80%;/*82*/
+    transition: 0.5s;
+  }
+
+
+
+  .boxboxsubmit{
+    display: flex;
+  }
+  .magicn{
+    margin-bottom: 1em;
+    font-weight: bolder;
+  }
+  .magicv{
+    color: var(--c6);
+  }
+  .magice{
+    color: var(--c1);
+  }
+
+  .box > .invalid {
+    border-color: var(--c1);
+  }

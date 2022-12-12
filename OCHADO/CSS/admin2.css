@@ -1,0 +1,81 @@
+@import url(root.css);
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /*background-image: url(background.jpg);)*/
+}
+.logo{
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #191919;
+}
+#sidebar-wrapper{
+    background: #1B2631;
+}
+.sidebar-heading{
+    background: var(--grad1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+#sidebar-wrapper .sidebar-heading {
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+hr{
+    opacity: 1;
+    border-width: 1px;
+    border-style: solid;
+    border-image: var(--grad2) 1;
+}
+
+.list-group-item a {
+    color: grey;
+}
+
+.active > a {
+    color: rgb(44, 44, 44);
+}
+
+.list-group-item a:hover {
+    background: var(--grad2);  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+.sub-menu{
+    margin: 0;
+    display: none;
+}
+.sub-menu a{
+    padding: 10px;
+    padding-left: 0px;
+    background: #1B2631;
+    
+}
+
+.dropdown{
+    background: var(--grad1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+.rotate{
+    transform: rotate(90deg);
+}
+
+.sub-menu .active{
+    background: white;
+}
