@@ -1,0 +1,18 @@
+.formbox{
+    position: absolute;
+    top: 50%;
+    translate: 0% -50%;
+    border-radius: 25px;
+}
+
+.magicn{
+    display: none;
+}
+.magice{
+    display: block;
+    color: red;
+}
+.magicv{
+    display: block;
+    color: green;
+}

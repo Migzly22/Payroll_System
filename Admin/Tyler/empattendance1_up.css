@@ -1,0 +1,80 @@
+
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+/*Added css from Emp Info*/
+.table td, .table th{
+  border-left: 1px solid;
+
+}
+.table>:not(:last-child)>:last-child>* {
+  border-bottom-color: black; 
+}
+
+
+.table th{ 
+  text-align: center;
+  background: #232323;
+  color: #F2F3F5;
+}
+.table td:first-child{
+  position:sticky;
+  left:0px;
+  border-right: 1px solid black; 
+  border-left: none;
+  font-weight: 500;
+}
+.table td{
+  border-bottom: 1px solid black; 
+  background-color: white;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: black;
+}
+/*End Added Css from Emp info*/
+
+.table .present{
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: white;
+}
+.table .absent{
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: white;
+    border-radius: 0px;
+    color: #dc3545!important;
+
+}
+
+.table .present{
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: white;
+  border-radius: 0px;
+}
+
+
+table::-webkit-scrollbar {
+    width: 1em;
+    background-color: #fff;
+  }
+  table::-webkit-scrollbar-thumb {
+    background-color: #DFDFDE;
+  }
+  
+
+  #searchingbtn{
+    margin-right: 11px;
+    width: 80px;
+    border: 1px solid #24a549;
+    background-color: #24a549;
+    color: white;
+  }
+  #searchingbtn:hover{
+    background-color: #66c080;
+    color: white;
+  }
+

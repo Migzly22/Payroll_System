@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="dist/gutenberg.css">
+<style>
+
+table, td, th {
+  border: 1px solid black;
+  text-align: left;
+
+}
+table {
+  width: 100%;
+}
+
+
+
+
+th {
+  height: 30px;
+}
+td {
+  padding: 5px;
+  height: 20px;
+}
+
+.specialtab{
+  border-collapse: collapse;
+  border: 0px;
+}
+.specialtab  tr, .specialtab  td {
+  border: 0px;
+}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <td rowspan="3" style="text-align: center;">
+        OCHADO MILK TEA SHOP
+        <br><br>
+        <b>ACTIVE</b>
+        <br>
+        <b style="font-size: 30px;">PAYSLIP</b>
+
+    </td>
+    <td><sup><small>BRANCH : </small></sup> <b>BUCANDALA</b>  </td>
+    <td> <sup><small>DEPARTMENT : </small></sup> <b>COUNTER</b>   </td>
+    <td> <sup><small>EMPLOYEE NUMBER : </small> </sup>   <b>-</b> </td>
+  </tr>
+  <tr>
+    <td colspan="2"> <sup> <small>EMPLOYEE NAME : </small></sup> <b>{{EMPNAME}}</b></td>
+    <td > <sup> <small>BASIC RATE : </small></sup> <b>{{BASICRATE}}</b></td>
+  </tr>
+  <tr>
+    <td><sup> <small>PAYROLL PERIOD :</small></sup> <b>{{PAIDRANGE}}</b></td>
+    <td><sup> <small>PAYDAY :</small></sup> <b>{{PAYDAY}}</b></td>
+    <td><sup> <small>NETPAY : </small></sup> <b>{{NETPAY}}</b></td>
+  </tr>
+
+
+
+</table>
+<table>
+  <tr>
+    <td colspan="2" style="text-align: center;">EARNINGS </td>
+    <td colspan="2" style="text-align: center;">DEDUCTIONS</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <table class="specialtab">
+          <tr>
+            <td></td>
+            <td style="text-align: center;"><small>Hours Rendered</small></td>
+            <td style="text-align: center;"><small>Amount</small> </td>
+          </tr>
+          <tr>
+            <td><small>Basic pay</small></td>
+            <td style="text-align: center;"><small>{{HOURS}}</small></td>
+            <td style="text-align: center;"><small>{{EARNINGS}}</small> </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+      </table>
+
+    </td>
+    <td colspan="2">
+      <table class="specialtab">
+        <tr>
+          <td><small> SSS Contribution</small></td>
+          <td style="text-align: end;"> <small> <b>{{SSS}}</b></small> </td>
+        </tr>
+        <tr>
+          <td><small> Pag-ibig Contribution</small></td>
+          <td style="text-align: end;"> <small> <b>{{PAGIBIG}}</b></small> </td>
+        </tr>
+        <tr>
+          <td><small> Philhealth Contribution</small></td>
+          <td style="text-align: end;"> <small> <b>{{PHILHEALTH}}</b></small> </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+  <tr>
+    <td><small>TOTAL EARNINGS</small> </td>
+    <td style="text-align: end;"><small> <b>{{TOTALEARNING}}</b></small></td>
+    <td><small>TOTAL DEDUCTIONS</small></td>
+    <td style="text-align: end;"><small> <b>{{TOTALDEDUCTION}}</b></small></td>
+  </tr>
+</table>
+
+</body>
+</html>

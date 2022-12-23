@@ -1,0 +1,77 @@
+table {
+    white-space: nowrap;
+    max-height: 70vh;
+    width: 100%;
+  
+}
+  #searchingbtn{
+    margin-right: 11px;
+    width: 80px;
+    border: 1px solid #24a549;
+    background-color: #24a549;
+    color: white;
+  }
+  #searchingbtn:hover{
+    background-color: #66c080;
+    color: white;
+  }
+  
+.slidebtn .btn {
+  margin-right: 11px;
+  width: 80px;
+  border: 1px solid #24a549;
+  background-color: #24a549;
+  color: white;
+}
+.slidebtn .btn:hover{
+    background-color: #66c080;
+    color: white;
+}
+.slidebtn .cancelbtn{
+  background-color: #0d0d0d;
+  border: 1px solid #0d0d0d;
+  color: white;
+}
+.slidebtn .cancelbtn:hover{
+  background-color: #3d3d3d;
+  color: white;
+}
+.table th{ 
+  text-align: center;
+  background: #232323;
+  color: #F2F3F5;
+}
+.table td{
+  border: 1px solid #0d0d0d;
+  background-color: white;
+  color: #0d0d0d;
+}
+tr:nth-child(even){
+  background: red;
+}
+th:nth-child(1){
+  text-align: left;
+  padding-left: 40px;
+}
+th:nth-child(2){
+  text-align: left;
+  padding-left: 10px;
+}
+td:nth-child(1){
+  text-align: left;
+  padding-left: 40px;
+}
+td:nth-child(2){
+  text-align: left;
+}
+.btn-success{
+  width: 80px;
+  background-color: #24a549;
+  color: white;
+}
+
+.btn-danger{
+  width: 80px;
+  background-color: #dc3545;
+  color: white;
+}

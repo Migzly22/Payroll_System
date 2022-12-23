@@ -1,0 +1,1 @@
+Install the BOOTSTRAP v5.2, then cut and place css and js folder in this folder.

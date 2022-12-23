@@ -1,0 +1,1 @@
+Install DOMPDF using Composer directed to this folder

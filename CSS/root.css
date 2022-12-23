@@ -1,0 +1,48 @@
+:root{
+    --color1: #0d6efd;
+
+    --warningcolor: #dc3545;
+
+    /*Ochado Color Scheme*/
+    --c1 :#ff0400;
+    --c2 : #eff0ee;
+    --c3: #040404;
+    --c4: #6efac0;
+    --c5 : #694342;
+    --c6 : #00ff95;
+    --c7: #2e2d2e;
+    --c8: #7c7c84;
+    --c9: #3c3c44;
+
+    --grad1 : linear-gradient(
+      to right, var(--c1), var(--c6));
+    --grad2: linear-gradient(
+      to right,
+      hsl(98 100% 62%),
+      var(--c6)
+      );
+}
+
+
+
+
+
+
+
+
+.form-control:focus{
+  border-color: var(--color1);
+  box-shadow: none;
+}
+.form-control:focus + label{
+  color: var(--color1);
+}
+
+
+.form-control.is-invalid:focus{
+  border-color: var(--warningcolor);
+  box-shadow: none;
+}
+.form-control.is-invalid:focus + label{
+  color: var(--warningcolor);
+}

@@ -1,0 +1,14 @@
+table {
+    white-space: nowrap;
+    max-height: 70vh;
+  
+  }
+
+  .slidebtn .btn{
+    border: 1px solid green;
+    color: green;
+}
+.slidebtn .btn:hover{
+    background-color: green;
+    color: white;
+}

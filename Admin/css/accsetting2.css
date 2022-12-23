@@ -1,0 +1,29 @@
+.rightside{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.rbox{
+    height: 39vh;
+}
+
+.rbox h5{
+    background-color: #000;
+    color: white;
+    padding: 10px;
+}
+
+.btn-success{
+    background-color: #24a549;
+    color: white;
+}
+
+.btn-danger{
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-primary{
+    background-color: #3333ff;
+    color: white;
+}

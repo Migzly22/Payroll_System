@@ -1,0 +1,13 @@
+.btn-success{
+    background: #24a549;
+    border: 1px solid green;
+    color: white;
+}
+
+/*
+.btn-success:disabled {
+    background: white;
+    border: 0;
+    color: black;
+}
+*/

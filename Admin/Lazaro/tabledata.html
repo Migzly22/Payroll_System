@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td, th {
+
+            text-align: left;
+
+        }
+        th{
+            border: 1px solid black;
+            text-align: center;
+        }
+        td{
+            border: 1px solid black;
+            padding: 5px
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .text-align{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Ochado Employee Monthly Report</h1>
+    <h3 style="text-align: center;"> ({{YEAR}}-{{MONTH}})</h3>
+    <table>
+        <thead>
+            <th>EMPLOYEE NAME</th>
+            <th>TOTAL EARNINGS</th>
+            <th>TOTAL DEDUCTIONS</th>
+            <th>TOTAL INCOME</th>
+        </thead>
+        {{TBODY}}
+        <!--       
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td class="text-align">9.04</td>
+                    <td class="text-align">1212</td>
+                    <td class="text-align">1212</td>
+                </tr>
+            </tbody>
+        -->
+
+    </table>
+</body>
+</html>

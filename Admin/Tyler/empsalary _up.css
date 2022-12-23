@@ -1,0 +1,22 @@
+
+.table th{ 
+    text-align: center;
+    background: #232323;
+    color: #F2F3F5;
+}
+.table td{
+    background-color: white;
+    border:1px solid #0d0d0d;
+    color: #0d0d0d;
+}
+
+.btn-success{
+    width: 80px;
+    border: 1px solid #24a549;
+    background-color: #24a549;
+    color: white;
+}
+.btn-success:hover{
+    background-color: #66c080;
+    color: white;
+}
