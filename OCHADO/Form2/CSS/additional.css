@@ -1,0 +1,8 @@
+/*Good Notif*/
+.alertgood {
+    padding: 10px;
+    background-color: #a4f8b2; /*#f2dede*/
+    color: #48b964;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
