@@ -1,8 +1,0 @@
-@import url(root.css);
-
-.formbox{
-    position: absolute;
-    top: 50%;
-    translate: 0% -50%;
-    border-radius: 25px;
-}
