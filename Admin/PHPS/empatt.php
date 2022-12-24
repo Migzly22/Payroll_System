@@ -125,23 +125,14 @@
                         }
                         $lastdate = $rowdate["Attendance_date"];
                     }
-/*
-                    // to know if we use dateender or date today
-                    $datediff2 = date_diff(date_create($datetoday) ,date_create($startingdatepay) )->format('%a');
+                    $maindiff = date_diff(date_create($lastdate),date_create($datetoday))->format("%a");
 
-
-                    if ((int)($datediff2 / 15) == 0) {
-                        $dateparam = $datetoday;
-                    }else{
-                        $dateparam = $dateender;
+                    $boo = date_diff(date_create($startingdatepay),date_create($datetoday))->format("%a");
+                    if ((int)($boo/15) == 0){
+                        for ($i=0; $i <= $maindiff -1  ; $i++) { 
+                            $trs .="<td class='text-center absent'>✗</td>";
+                        }
                     }
-                
-                    $datearrnew = getBetweenDates($lastdate, $dateparam);
-
-                    for ($i=0; $i < count($datearrnew)  ; $i++) { 
-                        $trs .="<td class='text-center absent'>✗</td>";
-                    }
-*/
 
                 }else{
                     for ($i=0; $i < $diff +1 ; $i++) { 

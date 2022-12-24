@@ -142,13 +142,12 @@
                                             $lastdate = $rowdate["Attendance_date"];
                                         }
 
-                                        /*
-                                        $datearrnew = getBetweenDates($lastdate, $datetoday);
-                                        for ($i=0; $i < count($datearrnew) -1  ; $i++) { 
+
+                                        $maindiff = date_diff(date_create($lastdate),date_create($datetoday))->format("%a");
+
+                                        for ($i=0; $i <= $maindiff -1  ; $i++) { 
                                             $trs .="<td class='text-center absent'>✗</td>";
                                         }
-                                        */
-
                                     }else{
                                         for ($i=0; $i <= $maindiff ; $i++) { 
                                             $trs .="<td class='text-center absent'>✗</td>";
