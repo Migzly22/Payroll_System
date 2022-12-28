@@ -335,7 +335,7 @@ supported-color-schemes: light dark;
   
 
   $mail ->send();
-  $url = '../Form2/reset2.php';
+  $url = '../Form2/resetting.php';
   header('Location: '.$url);
   ob_flush();
 ?>

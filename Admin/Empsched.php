@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="./css/sched.css">
 <link rel="stylesheet" href="./Tyler/sched1.css">
-<link rel="stylesheet" href="./css/qweqwe1.css">
+<link rel="stylesheet" href="./css/qweqwe12.css">
 
 
 <script src="./js/empsched.js" defer></script>
